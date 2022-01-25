@@ -6,10 +6,10 @@ Module for representation of class rectangle
 
 class Rectangle:
     """Rectangle class"""
-    def __init__(self, width=0, heigth=0):
+    def __init__(self, width=0, height=0):
         """Initializes a rectangle instance"""
         self.width = width
-        self.heigth = heigth
+        self.height = height
 
     @property
     def width(self):
@@ -17,9 +17,9 @@ class Rectangle:
         return self.__width
 
     @property
-    def heigth(self):
+    def height(self):
         """get rectangle heigth"""
-        return self.__heigth
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -30,11 +30,11 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @heigth.setter
-    def heigth(self, value):
+    @height.setter
+    def height(self, value):
         """set rectangle height"""
         if type(value) is not int:
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("heigth must be >= 0")
-        self.__heigth = value
+            raise ValueError("height must be >= 0")
+        self.__height = value
