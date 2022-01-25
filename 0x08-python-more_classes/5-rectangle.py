@@ -63,3 +63,14 @@ class Rectangle:
             if i != self.__height - 1:
                 d_rec += '\n'
         return d_rec
+
+    def __repr__(self):
+        """
+        Return a string representation of a rectangle instance
+        using a new instance with eval()
+        """
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
+
+    def __del__(self):
+        """Deletes an instance"""
+        print("Bye rectangle...")
