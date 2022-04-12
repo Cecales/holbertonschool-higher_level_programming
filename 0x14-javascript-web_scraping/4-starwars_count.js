@@ -15,6 +15,6 @@ request.get(apiUrl, (err, response, body) => {
     );
     console.log(films.length);
   } else {
-      console.log(err);
+    console.log(err);
   }
 });
